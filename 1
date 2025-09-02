@@ -1,0 +1,11 @@
+public class FoilUnlocker : MonoBehaviour {
+    public ComicTracker comicTracker;
+
+    public void TryUnlockFoil(ComicIssue issue) {
+        if (comicTracker.IsUnlocked(issue)) {
+            comicTracker.UnlockIssue(issue, isFoil: true);
+            Debug.Log($"Foil variant for {issue} unlocked!");
+            // Trigger AR sparkle or animation
+        }
+    }
+}
